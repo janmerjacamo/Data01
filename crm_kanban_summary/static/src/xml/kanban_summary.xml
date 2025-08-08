@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="crm_kanban_summary.CrmSummaryBar" owl="1">
+        <div class="o_kanban_summary_bar" style="padding: 10px; background: #f0f0f0; border-bottom: 1px solid #ccc;">
+            <div>
+                <label>Fecha Inicio: <input type="date" t-model="state.dateStart" t-on-change="onDateChange"/></label>
+                <label>Fecha Fin: <input type="date" t-model="state.dateEnd" t-on-change="onDateChange"/></label>
+            </div>
+            <div style="margin-top: 5px;">
+                <strong>Total Oportunidades:</strong> <t t-esc="state.total"/>
+                &nbsp;&nbsp;
+                <strong>Suma de Montos:</strong> <t t-esc="state.amount.toFixed(2)"/>
+            </div>
+        </div>
+    </t>
+</templates>
